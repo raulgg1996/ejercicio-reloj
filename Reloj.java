@@ -18,5 +18,21 @@ public class Reloj
         
         return cadResultado;
     }
+    public void TicTac()
+    {
+        if(minutos<=59)
+        {
+            minutos=minutos+1;
     
+        }
+        else
+        {
+            minutos=0;
+            horas=horas+1;
+        }
+        if(horas==24)
+        {
+            horas=0;
+        } 
+    } 
 }   
