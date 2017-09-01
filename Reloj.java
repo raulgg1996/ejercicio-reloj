@@ -1,4 +1,7 @@
-
+/*
+ * @author Raul Gonzalez Gonzalez
+ * version 4.1.1
+ */
 public class Reloj
 {
     private int horas;
@@ -9,15 +12,30 @@ public class Reloj
         horas=horainicial;
         minutos=mininicial;
     }
+    /*
+     * metodo que permite mostrar al usuario la hora exacta con 4 digitos.
+     * 
+     */
     public String dimeTuTiempo()
     {
         String cadResultado="";
+        if (horas<10)
+        {
+            cadResultado=cadResultado+"0";
+        }
         cadResultado=cadResultado+horas;
         cadResultado=cadResultado+":";
+        if(minutos<10)
+        {
+            cadResultado=cadResultado+"0";
+        }
         cadResultado=cadResultado+minutos;
         
         return cadResultado;
     }
+    /*
+     * metodo que permite avanzar el reloj un minuto cada vez que el usuario lo decida.
+     */
     public void TicTac()
     {
         if(minutos<=59)
@@ -27,12 +45,18 @@ public class Reloj
         }
         else
         {
-            minutos=0;
-            horas=horas+1;
+            minutos=00;
+            horas+=1;
+            
         }
-        if(horas==24)
+        if(horas>23)
         {
-            horas=0;
-        } 
+            horas=00;
+            
+        }
+        else
+        {
+            minutos+=1;
+        }
     } 
 }   
