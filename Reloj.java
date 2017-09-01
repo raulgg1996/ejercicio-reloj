@@ -1,4 +1,4 @@
-/*
+/**
  * @author Raul Gonzalez Gonzalez
  * version 4.1.1
  */
@@ -12,7 +12,7 @@ public class Reloj
         horas=horainicial;
         minutos=mininicial;
     }
-    /*
+    /**
      * metodo que permite mostrar al usuario la hora exacta con 4 digitos.
      * 
      */
@@ -33,7 +33,7 @@ public class Reloj
         
         return cadResultado;
     }
-    /*
+    /**
      * metodo que permite avanzar el reloj un minuto cada vez que el usuario lo decida.
      */
     public void TicTac()
